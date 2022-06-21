@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+     .contact {
+          transform: translate(-50%, -50%);
+          background: linear-gradient(90deg, yellow, orange, red, violet, purple, blue, yellow);
+          background-size: 400%;
+          animation: animate 8s linear infinite;
+        }
+        @keyframes animate {
+          0% {
+            background-position: 0%;
+          }
+          100% {
+            background-position: 200%;
+          }
+        }        
+}
+
+@layer components{
+     .hamburger div:first-child {
+          @apply rotate-45 translate-y-1.5;
+     }
+     .hamburger div:last-child {
+          @apply -rotate-45 -translate-y-1;
+     }
+}
