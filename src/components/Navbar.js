@@ -11,7 +11,7 @@ const Navbar = () => {
                                 <a href="www.google.com" className="flex items-center">
                                     <img src={profile_pic} alt="Logo" className="w-10 h-10 rounded-full" />
                                     <span className="ml-5 font-bold text-blue-800 text-xl">
-                                        WEB DEVELOPER
+                                        PYAE SONE
                                     </span>
                                 </a>
                             </div>

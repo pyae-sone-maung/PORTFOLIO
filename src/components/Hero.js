@@ -1,5 +1,6 @@
 import React from "react";
 import profile_pic from "../assets/images/Me.jpg"
+import {FaFacebookSquare, FaGithubSquare,FaLinkedin } from 'react-icons/fa'
 
 const Hero = () => {
     return (
@@ -13,9 +14,9 @@ const Hero = () => {
                     <br />
                     <button className="px-5 py-1 mt-5 text-white font-bold rounded-full bg-blue-800 "> Download CV </button>
                     <div className="flex py-5 space-x-4">
-                        <a href="www.google.com"> Facebook </a>
-                        <a href="www.google.com"> Github </a>
-                        <a href="www.google.com"> Linkined </a>
+                        <a href="www.google.com"> <FaFacebookSquare className="w-8 h-8"/> </a>
+                        <a href="www.google.com"> <FaGithubSquare className="w-8 h-8"/> </a>
+                        <a href="www.google.com"> <FaLinkedin className="w-8 h-8"/> </a>
                     </div>
                </div>
                <div className="px-10 lg:-mt-5">
@@ -27,9 +28,9 @@ const Hero = () => {
                <p className="mt-1 text-2xl text-blue-600 font-bold drop-shadow-md"> Pyae Sone Maung </p>
                <p className="mt-3 mb-2 text-xl text-sky-700 font-bold" > Web Developer </p>
                <div className="flex space-x-5 place-content-center">
-                    <a href="www.google.com"> Facebook </a>
-                    <a href="www.google.com"> Github </a>
-                    <a href="www.google.com"> Linked </a>
+                    <a href="www.google.com"> <FaFacebookSquare className="w-8 h-8"/> </a>
+                    <a href="www.google.com"> <FaGithubSquare className="w-8 h-8"/> </a>
+                    <a href="www.google.com"> <FaLinkedin className="w-8 h-8"/> </a>
                </div>
            </div>
         </div>
