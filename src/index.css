@@ -2,28 +2,111 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-     .contact {
-          transform: translate(-50%, -50%);
-          background: linear-gradient(90deg, yellow, orange, red, violet, purple, blue, yellow);
-          background-size: 400%;
-          animation: animate 8s linear infinite;
-        }
-        @keyframes animate {
-          0% {
-            background-position: 0%;
-          }
-          100% {
-            background-position: 200%;
-          }
-        }        
+@layer components {
+    .hamburger div:first-child {
+        @apply rotate-45 translate-y-1.5;
+    }
+    .hamburger div:last-child {
+        @apply -rotate-45 -translate-y-1;
+    }
 }
 
-@layer components{
-     .hamburger div:first-child {
-          @apply rotate-45 translate-y-1.5;
-     }
-     .hamburger div:last-child {
-          @apply -rotate-45 -translate-y-1;
-     }
+@layer utilities {
+    .wave {
+        animation-name: wave-animation;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        transform-origin: 70% 70%;
+        display: inline-block;
+    }
+
+    @keyframes wave-animation {
+        0% {
+            transform: rotate(0deg);
+        }
+        10% {
+            transform: rotate(14deg);
+        }
+        20% {
+            transform: rotate(-8deg);
+        }
+        30% {
+            transform: rotate(14deg);
+        }
+        40% {
+            transform: rotate(-4deg);
+        }
+        50% {
+            transform: rotate(10deg);
+        }
+        60% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+}
+
+@layer utilities {
+    .about-pic {
+        border: 5px solid gray;
+        border-radius: 50% 10%;
+    }
+}
+
+@layer utilities {
+    .inner-orbit {
+        animation: spin-right 20s linear infinite;
+    }
+
+    .middle-orbit {
+        animation: spin-right 15s linear infinite;
+    }
+
+    @keyframes spin-right {
+        100% {
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+}
+
+@layer utilities {
+    .glassbg {
+        background: rgba(255, 255, 255, 0.31);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.17);
+    }
+}
+
+@layer utilities {
+    .skill-bg-color {
+        background-image: linear-gradient(150deg, orange, yellow, red, cyan);
+        animation: colrspin 1.5s infinite linear;
+    }
+
+    @keyframes colrspin {
+        100% {
+            filter: hue-rotate(360deg);
+        }
+    }
+
+    .hue-bg-color {
+        box-shadow: -2px 0px 20px #fff;
+        background-image: linear-gradient(150deg, orange, yellow, red, cyan);
+        animation: cbcspin 2s infinite linear;
+    }
+
+    @keyframes cbcspin {
+        100% {
+            filter: hue-rotate(360deg);
+        }
+    }
 }
