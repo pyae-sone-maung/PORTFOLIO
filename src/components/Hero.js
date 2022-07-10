@@ -1,38 +1,45 @@
 import React from "react";
-import profile_pic from "../assets/images/Me.jpg"
-import {FaFacebookSquare, FaGithubSquare,FaLinkedin } from 'react-icons/fa'
+import profile_pic from "../assets/images/Profile1.jpg";
+import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
     return (
-        <div className="py-2 lg:py-10 bg-gray-100 grid place-items-center">
-           <div className="py-5 grid place-items-center lg:space-x-48 lg:flex">
-               <div className="hidden lg:block mt-1 px-10">
-                    <span className="text-2xl text-blue-700 font-bold drop-shadow-lg" > Hi There, </span> <br /> <br />
-                    <span className="text-2xl text-blue-700 font-bold drop-shadow-md" > I'm </span>
-                    <span className="text-2xl text-yellow-400 font-bold drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-blue-600"> Pyae Sone Maung </span> <br />
-                    <span className="mt-5 text-xl font-bold text-sky-600"> I'm a Web Developer </span>
-                    <br />
-                    <button className="px-5 py-1 mt-5 text-white font-bold rounded-full bg-blue-800 "> Download CV </button>
-                    <div className="flex py-5 space-x-4">
-                        <a href="www.google.com"> <FaFacebookSquare className="w-8 h-8"/> </a>
-                        <a href="www.google.com"> <FaGithubSquare className="w-8 h-8"/> </a>
-                        <a href="www.google.com"> <FaLinkedin className="w-8 h-8"/> </a>
-                    </div>
-               </div>
-               <div className="px-10 lg:-mt-5">
-                    <img src={profile_pic} alt="Profile" className="rounded-full w-52 h-52 border-collapse shadow-lg shadow-cyan-500/50" />          
-               </div>
-           </div>
+        <div className="py-3 lg:py-12 text-white bg-cover bg-center grid place-items-center" id="hero">
+            <div className="absolute grid place-items-center lg:mt-24">
+                <div className="inner-orbit drop-shadow-lg lg:left-36 absolute rounded-full w-60 h-60 -mt-28 border-dotted border-4 border-blue-300"> </div>
+                <div className="middle-orbit drop-shadow-lg lg:left-28 lg:ml-2 absolute rounded-full w-72 h-72 -mt-28 border-dotted border-8 border-t-red-200 border-b-green-300 border-l-blue-200 border-r-yellow-300"></div>
+                <div className="outer-orbit"> </div>
+            </div>
 
-           <div className="px-10 text-center lg:hidden">
-               <p className="mt-1 text-2xl text-blue-600 font-bold drop-shadow-md"> Pyae Sone Maung </p>
-               <p className="mt-3 mb-2 text-xl text-sky-700 font-bold" > Web Developer </p>
-               <div className="flex space-x-5 place-content-center">
-                    <a href="www.google.com"> <FaFacebookSquare className="w-8 h-8"/> </a>
-                    <a href="www.google.com"> <FaGithubSquare className="w-8 h-8"/> </a>
-                    <a href="www.google.com"> <FaLinkedin className="w-8 h-8"/> </a>
-               </div>
-           </div>
+            <div className="py-5 grid place-items-center lg:gap-x-52 lg:flex">
+                <div className="hidden lg:block px-2">
+                    <span className="text-3xl font-bold text-cyan-100 tracking-wide"> <span className="wave"> 👋 </span> Hello ! </span>
+                    <br /> <br />
+                    <span className="text-3xl font-bold text-cyan-100 ml-5"> I'm </span>
+                    <span className="text-3xl font-bold"> Pyae Sone Maung </span>
+                    <br /> <br />
+                    <span className="text-2xl font-bold text-white tracking-wide ml-5"> Web Developer </span>
+                    <br /> <br />
+                    <div className="flex py-5 gap-x-4 ml-5">
+                        <a href="https://www.facebook.com/PyaeSoneMaung45"> <FaFacebookSquare className="w-8 h-8 rounded-sm hover:hue-bg-color" /></a>
+                        <a href="https://github.com/pyae-sone-maung"> <FaGithubSquare className="w-8 h-8 rounded-sm hover:hue-bg-color" /></a>
+                        <a href="https://www.linkedin.com/"> <FaLinkedin className="w-8 h-8 rounded-sm hover:hue-bg-color" /> </a>
+                    </div>
+                </div>
+                <div className="px-10 lg:-mt-4 mt-3 py-8 lg:py-0 lg:-ml-4">
+                    <img src={profile_pic} alt="Profile" className="rounded-full w-52 h-52 border-collapse shadow-sm shadow-cyan-500/50" />
+                </div>
+            </div>
+
+            <div className="grid place-content-center text-center lg:hidden">
+                <p className="mt-1 text-3xl font-bold"> Pyae Sone Maung </p>
+                <p className="mt-3 mb-2 text-2xl font-bold"> Web Developer </p>
+                <div className="flex gap-x-3 place-content-center">
+                    <a href="https://www.facebook.com/PyaeSoneMaung45"> <FaFacebookSquare className="w-8 h-8 rounded-sm hover:hue-bg-color" /> </a>
+                    <a href="https://github.com/pyae-sone-maung"> <FaGithubSquare className="w-8 h-8 rounded-sm hover:hue-bg-color" /> </a>
+                    <a href="https://www.linkedin.com/"> <FaLinkedin className="w-8 h-8 rounded-sm hover:hue-bg-color" /> </a>
+                </div>
+            </div>
         </div>
     );
 };
